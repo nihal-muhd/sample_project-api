@@ -10,7 +10,8 @@ connectDB()
 const taskRouter=require('./routes/taskRouter')
 
 app.use(express.json())
-app.use(cors())
+app.options('*', cors());
+app.use(cors());
 
 app.use('/',taskRouter)
 
