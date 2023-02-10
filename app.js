@@ -11,7 +11,7 @@ const taskRouter=require('./routes/taskRouter')
 
 app.use(express.json())
 app.use(cors({
-    origin: ["http://localhost:3000"],
+    origin: ["https://main.d3879vszpny6pq.amplifyapp.com/"],
     methods: ["GET", "POST"],
     credentials: true,
 }))
