@@ -31,10 +31,10 @@ module.exports.deleteTask=async(req,res)=>{
 module.exports.moveTask=async(req,res)=>{
     try {
         console.log(req.body)
-        const {id,stepStatus}=req.body
+        const {id,newStatus}=req.body
         await TaskModel.updateOne({id:id},{
             $set:{
-                status:stepStatus
+                status:newStatus
             }
         })
         res.status(201).json('task moved')
